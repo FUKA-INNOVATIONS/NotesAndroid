@@ -25,6 +25,7 @@ import com.example.notesandroid.components.NoteButton
 import com.example.notesandroid.components.NoteInputText
 import com.example.notesandroid.data.NotesDataSource
 import com.example.notesandroid.model.Note
+import com.example.notesandroid.util.formatDate
 import java.time.format.DateTimeFormatter
 
 @Composable
@@ -109,6 +110,7 @@ fun NoteRow(
         ) {
             Text(text = note.title, style = MaterialTheme.typography.subtitle2)
             Text(text = note.description, style = MaterialTheme.typography.subtitle1)
+            Text(text = formatDate(note.entryDate.time), style = MaterialTheme.typography.caption)
             //Text(text = note.entryDate.format(DateTimeFormatter.ofPattern("EEE, d MMM")), style = MaterialTheme.typography.caption)
         }
     }

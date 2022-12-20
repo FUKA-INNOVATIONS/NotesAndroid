@@ -13,12 +13,16 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.example.notesandroid.data.NotesDataSource
 import com.example.notesandroid.model.Note
 import com.example.notesandroid.screen.NoteScreen
 import com.example.notesandroid.ui.theme.NotesAndroidTheme
 import com.example.notesandroid.viewModel.NoteViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+
+// Identifies that this class is a dependency container
+// Now able to get the dependencies
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
